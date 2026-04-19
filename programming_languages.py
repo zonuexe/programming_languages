@@ -4,10 +4,11 @@ nodes_data = [
     {'id': 'ALGOL 60', 'year': 1960, 'category': 'Procedural'},
     {'id': 'ALGOL 68', 'year': 1968, 'category': 'Procedural'},
     {'id': 'Pascal', 'year': 1970, 'category': 'Procedural'},
+    {'id': 'CLU', 'year': 1974, 'category': 'Procedural'},
     {'id': 'BCPL / B', 'year': 1969, 'category': 'Procedural'},
     {'id': 'C', 'year': 1972, 'category': 'Procedural'},
     {'id': 'Ada', 'year': 1980, 'category': 'Procedural'},
-    {'id': 'Go', 'year': 2009, 'category': 'Procedural'},
+    {'id': 'Go', 'year': 2009, 'category': 'Concurrent'},
     {'id': 'Rust', 'year': 2010, 'category': 'Procedural'},
     {'id': 'Zig', 'year': 2016, 'category': 'Procedural'},
     {'id': 'Simula 67', 'year': 1967, 'category': 'OOP'},
@@ -22,25 +23,41 @@ nodes_data = [
     {'id': 'Scala', 'year': 2004, 'category': 'OOP'},
     {'id': 'Kotlin', 'year': 2011, 'category': 'OOP'},
     {'id': 'Swift', 'year': 2014, 'category': 'OOP'},
-    {'id': 'Lisp', 'year': 1958, 'category': 'Functional'},
+    {'id': 'LISP', 'year': 1958, 'category': 'Functional'},
+    {'id': 'LISP 1.5', 'year': 1962, 'category': 'Functional'},
+    {'id': 'MACLISP', 'year': 1966, 'category': 'Functional'},
     {'id': 'Scheme', 'year': 1975, 'category': 'Functional'},
+    {'id': 'Common Lisp', 'year': 1984, 'category': 'Functional'},
+    {'id': 'Emacs Lisp', 'year': 1985, 'category': 'Functional'},
+    {'id': 'Clojure', 'year': 2007, 'category': 'Functional'},
+    {'id': 'ISWIM', 'year': 1966, 'category': 'Functional'},
+    {'id': 'SASL', 'year': 1972, 'category': 'Functional'},
     {'id': 'ML', 'year': 1973, 'category': 'Functional'},
+    {'id': 'FP', 'year': 1977, 'category': 'Functional'},
+    {'id': 'KRC', 'year': 1981, 'category': 'Functional'},
     {'id': 'Standard ML', 'year': 1984, 'category': 'Functional'},
+    {'id': 'Miranda', 'year': 1985, 'category': 'Functional'},
     {'id': 'Haskell', 'year': 1990, 'category': 'Functional'},
     {'id': 'OCaml', 'year': 1996, 'category': 'Functional'},
+    {'id': 'F#', 'year': 2005, 'category': 'Functional'},
     {'id': 'Julia', 'year': 2012, 'category': 'Functional'},
     {'id': 'BASIC', 'year': 1964, 'category': 'Procedural'},
+    {'id': 'AWK', 'year': 1977, 'category': 'Scripting'},
     {'id': 'Perl', 'year': 1987, 'category': 'Scripting'},
     {'id': 'Python', 'year': 1991, 'category': 'Scripting'},
     {'id': 'Ruby', 'year': 1995, 'category': 'Scripting'},
     {'id': 'PHP', 'year': 1994, 'category': 'Scripting'},
     {'id': 'Lua', 'year': 1993, 'category': 'Scripting'},
     {'id': 'JavaScript', 'year': 1995, 'category': 'Scripting'},
+    {'id': 'ES6+', 'year': 2015, 'category': 'Scripting'},
+    {'id': 'CoffeeScript', 'year': 2009, 'category': 'Scripting'},
     {'id': 'TypeScript', 'year': 2012, 'category': 'Scripting'},
     {'id': 'Self', 'year': 1986, 'category': 'Scripting'},
     {'id': 'CSP', 'year': 1978, 'category': 'Concurrent'},
+    {'id': 'Limbo', 'year': 1995, 'category': 'Concurrent'},
     {'id': 'Erlang', 'year': 1986, 'category': 'Concurrent'},
-    {'id': 'Elixir', 'year': 2011, 'category': 'Concurrent'}
+    {'id': 'Elixir', 'year': 2011, 'category': 'Concurrent'},
+    {'id': 'Crystal', 'year': 2014, 'category': 'Concurrent'}
 ]
 
 links_data = [
@@ -50,15 +67,21 @@ links_data = [
     {'source': 'ALGOL 60', 'target': 'BCPL / B', 'type': 'solid'},
     {'source': 'BCPL / B', 'target': 'C', 'type': 'solid'},
     {'source': 'ALGOL 68', 'target': 'C', 'type': 'solid'},
+    {'source': 'ALGOL 68', 'target': 'Scheme', 'type': 'dashed'},
     {'source': 'Pascal', 'target': 'Ada', 'type': 'solid'},
+    {'source': 'Pascal', 'target': 'CLU', 'type': 'solid'},
+    {'source': 'Ada', 'target': 'Eiffel', 'type': 'solid'},
     {'source': 'Pascal', 'target': 'Delphi', 'type': 'solid'},
+    {'source': 'Pascal', 'target': 'Limbo', 'type': 'solid'},
+    {'source': 'CLU', 'target': 'Ruby', 'type': 'solid'},
+    {'source': 'CLU', 'target': 'Lua', 'type': 'solid'},
     {'source': 'C', 'target': 'C++', 'type': 'solid'},
     {'source': 'C', 'target': 'Objective-C', 'type': 'solid'},
-    {'source': 'C', 'target': 'Java', 'type': 'solid'},
-    {'source': 'C', 'target': 'C#', 'type': 'solid'},
     {'source': 'C', 'target': 'Go', 'type': 'solid'},
     {'source': 'C', 'target': 'D', 'type': 'solid'},
     {'source': 'C', 'target': 'Zig', 'type': 'solid'},
+    {'source': 'C', 'target': 'Perl', 'type': 'solid'},
+    {'source': 'C', 'target': 'AWK', 'type': 'solid'},
     {'source': 'Simula 67', 'target': 'Smalltalk', 'type': 'solid'},
     {'source': 'Simula 67', 'target': 'C++', 'type': 'solid'},
     {'source': 'Smalltalk', 'target': 'Objective-C', 'type': 'solid'},
@@ -66,40 +89,77 @@ links_data = [
     {'source': 'C++', 'target': 'Java', 'type': 'solid'},
     {'source': 'C++', 'target': 'C#', 'type': 'solid'},
     {'source': 'C++', 'target': 'D', 'type': 'solid'},
-    {'source': 'Objective-C', 'target': 'Swift', 'type': 'solid'},
-    {'source': 'Java', 'target': 'Scala', 'type': 'solid'},
-    {'source': 'Java', 'target': 'Kotlin', 'type': 'solid'},
-    {'source': 'Lisp', 'target': 'Scheme', 'type': 'solid'},
+    {'source': 'Objective-C', 'target': 'Swift', 'type': 'dashed'},
+    {'source': 'Eiffel', 'target': 'Ruby', 'type': 'solid'},
+    {'source': 'Java', 'target': 'Scala', 'type': 'dashed'},
+    {'source': 'Java', 'target': 'Kotlin', 'type': 'dashed'},
+    {'source': 'Java', 'target': 'Clojure', 'type': 'dashed'},
+    {'source': 'Scala', 'target': 'Kotlin', 'type': 'solid'},
+    {'source': 'LISP', 'target': 'LISP 1.5', 'type': 'solid'},
+    {'source': 'LISP 1.5', 'target': 'MACLISP', 'type': 'solid'},
+    {'source': 'LISP 1.5', 'target': 'Scheme', 'type': 'solid'},
+    {'source': 'Common Lisp', 'target': 'Elixir', 'type': 'dashed'},
     {'source': 'ML', 'target': 'Standard ML', 'type': 'solid'},
+    {'source': 'ISWIM', 'target': 'SASL', 'type': 'solid'},
+    {'source': 'SASL', 'target': 'KRC', 'type': 'solid'},
+    {'source': 'KRC', 'target': 'Miranda', 'type': 'solid'},
+    {'source': 'Miranda', 'target': 'Haskell', 'type': 'solid'},
+    {'source': 'FP', 'target': 'Haskell', 'type': 'solid'},
     {'source': 'Standard ML', 'target': 'OCaml', 'type': 'solid'},
-    {'source': 'Standard ML', 'target': 'Haskell', 'type': 'solid'},
+    {'source': 'Standard ML', 'target': 'Haskell', 'type': 'dashed'},
+    {'source': 'JavaScript', 'target': 'CoffeeScript', 'type': 'solid'},
+    {'source': 'JavaScript', 'target': 'ES6+', 'type': 'solid'},
+    {'source': 'CoffeeScript', 'target': 'ES6+', 'type': 'solid'},
     {'source': 'JavaScript', 'target': 'TypeScript', 'type': 'solid'},
-    {'source': 'CSP', 'target': 'Erlang', 'type': 'solid'},
+    {'source': 'ES6+', 'target': 'TypeScript', 'type': 'solid'},
+    {'source': 'CSP', 'target': 'Limbo', 'type': 'solid'},
     {'source': 'Erlang', 'target': 'Elixir', 'type': 'solid'},
+    {'source': 'Limbo', 'target': 'Go', 'type': 'solid'},
+    {'source': 'Go', 'target': 'Crystal', 'type': 'dashed'},
+    {'source': 'Go', 'target': 'Zig', 'type': 'dashed'},
     {'source': 'Smalltalk', 'target': 'Self', 'type': 'dashed'},
-    {'source': 'Lisp', 'target': 'ML', 'type': 'dashed'},
+    {'source': 'MACLISP', 'target': 'ML', 'type': 'dashed'},
+    {'source': 'MACLISP', 'target': 'Common Lisp', 'type': 'solid'},
+    {'source': 'MACLISP', 'target': 'Emacs Lisp', 'type': 'solid'},
+    {'source': 'Common Lisp', 'target': 'Emacs Lisp', 'type': 'dashed'},
+    {'source': 'Common Lisp', 'target': 'Clojure', 'type': 'dashed'},
     {'source': 'Scheme', 'target': 'Standard ML', 'type': 'dashed'},
+    {'source': 'Scheme', 'target': 'Common Lisp', 'type': 'dashed'},
+    {'source': 'Scheme', 'target': 'Clojure', 'type': 'dashed'},
     {'source': 'Haskell', 'target': 'Scala', 'type': 'dashed'},
+    {'source': 'Haskell', 'target': 'F#', 'type': 'dashed'},
     {'source': 'Self', 'target': 'JavaScript', 'type': 'dashed'},
+    {'source': 'AWK', 'target': 'Perl', 'type': 'dashed'},
     {'source': 'Perl', 'target': 'Python', 'type': 'dashed'},
-    {'source': 'Perl', 'target': 'Ruby', 'type': 'dashed'},
+    {'source': 'Perl', 'target': 'Ruby', 'type': 'solid'},
     {'source': 'Perl', 'target': 'PHP', 'type': 'dashed'},
     {'source': 'Python', 'target': 'Julia', 'type': 'dashed'},
     {'source': 'C', 'target': 'Rust', 'type': 'dashed'},
-    {'source': 'OCaml', 'target': 'Rust', 'type': 'dashed'}, 
-    {'source': 'C++', 'target': 'Rust', 'type': 'dashed'},   
-    {'source': 'Scheme', 'target': 'JavaScript', 'type': 'dashed'}, 
-    {'source': 'Ruby', 'target': 'Elixir', 'type': 'dashed'},
+    {'source': 'OCaml', 'target': 'Rust', 'type': 'dashed'},
+    {'source': 'OCaml', 'target': 'F#', 'type': 'solid'},
+    {'source': 'C++', 'target': 'Rust', 'type': 'dashed'},
+    {'source': 'C#', 'target': 'F#', 'type': 'dashed'},
+    {'source': 'Scheme', 'target': 'JavaScript', 'type': 'dashed'},
+    {'source': 'Ruby', 'target': 'Elixir', 'type': 'solid'},
+    {'source': 'Ruby', 'target': 'CoffeeScript', 'type': 'solid'},
+    {'source': 'Ruby', 'target': 'Scala', 'type': 'solid'},
+    {'source': 'Ruby', 'target': 'Swift', 'type': 'dashed'},
+    {'source': 'Ruby', 'target': 'Crystal', 'type': 'solid'},
+    {'source': 'Rust', 'target': 'Swift', 'type': 'dashed'},
+    {'source': 'Rust', 'target': 'Zig', 'type': 'dashed'},
     {'source': 'Java', 'target': 'C#', 'type': 'dashed'},
     {'source': 'Haskell', 'target': 'Rust', 'type': 'dashed'},
     {'source': 'Delphi', 'target': 'C#', 'type': 'dashed'},
     {'source': 'COBOL', 'target': 'Ada', 'type': 'dashed'}
 ]
 
-width, height = 1600, 1050
+width, height = 1600, 1150
 padding = 80
 rect_w, rect_h = 96, 32
 margin_x, track_h = 40, 45
+# 同じトラックに直前ノードを載せるときの最小中心間隔は rect_w + margin_x。
+# Concurrent だけ「年が離れていても横一列に並びすぎる」ので余白を広げる（例: CSP と Erlang）。
+category_margin_x = {'Concurrent': 120}
 
 cat_colors = {
     'Procedural': '#4a7cba', 'OOP': '#55a049', 'Functional': '#d4a017',
@@ -111,7 +171,7 @@ def get_x(year):
 
 cat_y = {
     'Procedural': 180, 'OOP': 380, 'Functional': 580,
-    'Scripting': 780, 'Concurrent': 940
+    'Scripting': 780, 'Concurrent': 1040
 }
 
 node_pos = {}
@@ -120,10 +180,11 @@ sorted_nodes = sorted(nodes_data, key=lambda n: n['year'])
 
 for node in sorted_nodes:
     cat = node['category']
+    mx = category_margin_x.get(cat, margin_x)
     base_x, base_y = get_x(node['year']), cat_y[cat]
     best_track = 0
     for track in [0, -1, 1, -2, 2, -3, 3]:
-        if base_x > cat_tracks[cat].get(track, -1000) + rect_w + margin_x:
+        if base_x > cat_tracks[cat].get(track, -1000) + rect_w + mx:
             best_track = track
             break
     cat_tracks[cat][best_track] = base_x
